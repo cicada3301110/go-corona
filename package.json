@@ -1,0 +1,21 @@
+{
+  "name": "go-corona",
+  "version": "1.0.0",
+  "description": "Download GoCorona Application To Protect Yourself",
+  "main": "script.js",
+  "scripts": {
+    "build": "npx tailwindcss -i ./src/styles/input.css -o ./src/styles/style.css --watch"
+  },
+  "keywords": [
+    "corona",
+    "virus",
+    "health",
+    "protection"
+  ],
+  "author": "whoami",
+  "license": "MIT",
+  "dependencies": {
+    "jquery": "^3.7.1",
+    "sweetalert2": "^11.10.5"
+  }
+}

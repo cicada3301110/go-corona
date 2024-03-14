@@ -1,0 +1,292 @@
+<!DOCTYPE html>
+
+<html lang="en-us" class="p-0 m-0 border-box font-rubikRegular scroll-smooth">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+        <meta http-equiv="X-UA-Compatible" content="ie=edge">
+        <meta name="author" content="whoami">
+        <meta name="description" content="Use GoCorona application to protect yourself">
+        <link rel="stylesheet" href="./src/styles/style.css">
+        <link rel="shortcut icon" href="./assets/icons/favicon.ico" type="image/x-icon">
+        <title>Go Corona</title>
+    </head>
+    <body class="min-h-screen overflow-x-hidden relative">
+        <!-- All Icons -->
+        <svg class="hidden">
+            <symbol id="play" viewBox="0 0 44 44" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <circle cx="22" cy="22" r="21.5" stroke="#4285F4"/>
+                <path d="M18.8333 16.5152L28.3333 22L18.8333 27.4848L18.8333 16.5152Z" stroke="#4285F4"/>
+            </symbol>
+            <symbol id="vector1" width="65" height="73" viewBox="0 0 65 73" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M64.4813 25.6102H43.0528V72.4102H35.9099V50.8102H28.7671V72.4102H21.6242V25.6102H0.195633V18.4102H64.4813V25.6102ZM32.3385 0.410156C34.2329 0.410156 36.0497 1.16873 37.3893 2.51899C38.7288 3.86925 39.4813 5.7006 39.4813 7.61016C39.4813 9.51971 38.7288 11.3511 37.3893 12.7013C36.0497 14.0516 34.2329 14.8102 32.3385 14.8102C30.4441 14.8102 28.6273 14.0516 27.2877 12.7013C25.9482 11.3511 25.1956 9.51971 25.1956 7.61016C25.1956 3.61416 28.3742 0.410156 32.3385 0.410156Z" fill="#EC5863"/>
+            </symbol>
+            <symbol id="vector2" width="68" height="73" viewBox="0 0 68 73" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M33.7249 0.638428C27.8873 0.638428 24.3931 1.52458 22.172 2.6295C21.0601 3.18335 20.2706 3.76489 19.7397 4.36027C19.2059 4.95566 18.8696 5.83074 18.8696 5.83074C18.7824 6.05314 18.7245 6.28584 18.6972 6.52304L17.2184 25.4757C17.1989 25.592 17.2378 25.7803 17.2184 25.9077L17.046 27.8129C17.0298 27.9851 17.0298 28.1585 17.046 28.3307C17.046 37.4692 24.5515 44.9461 33.7249 44.9461C42.8983 44.9461 50.4038 37.4692 50.4038 28.3307V27.8987C50.4043 27.8701 50.4043 27.8415 50.4038 27.8129L48.7526 6.52304C48.7254 6.28584 48.6674 6.05314 48.5803 5.83074C48.5803 5.83074 48.2439 4.95566 47.7102 4.36027C47.1792 3.76212 46.3898 3.18058 45.2778 2.6295C43.0568 1.52181 39.5625 0.638428 33.7249 0.638428ZM33.7249 44.9461C15.3781 44.9461 0.367126 53.5474 0.367126 61.3012V72.6384H67.0827V61.3012C67.0827 53.935 53.5117 45.8212 36.4186 45.032C35.5219 44.973 34.6235 44.9444 33.7249 44.9461ZM33.7249 6.17689C39.0066 6.17689 41.6446 7.00766 42.7593 7.5615C43.1318 7.74704 43.1763 7.81904 43.2819 7.90766L44.4105 22.1C41.8531 22.255 38.3672 22.7923 33.7249 22.7923C29.0826 22.7923 25.5995 22.255 23.0393 22.1L24.1679 7.90766C24.2708 7.81904 24.318 7.74704 24.6905 7.5615C25.8052 7.00766 28.4433 6.17689 33.7249 6.17689ZM31.4649 8.94612V12.236H28.1653V16.736H31.4677V20.023H35.9821V16.7332H39.2846V12.236H35.9821V8.94612H31.4677H31.4649ZM25.3855 51.1769L32.5101 67.1H5.92676V61.3012C5.92676 59.2381 13.0153 53.1957 25.3855 51.1769ZM42.0644 51.1769C54.4346 53.1984 61.5231 59.2381 61.5231 61.3012V67.1H34.9397L42.0644 51.1769Z" fill="#EC5863"/>
+            </symbol>
+            <symbol id="vector3" width="88" height="73" viewBox="0 0 88 73" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M24.5815 0.967773C18.2049 0.967773 12.0895 3.4698 7.58063 7.92344C3.07172 12.3771 0.538635 18.4175 0.538635 24.7159C0.538635 26.8748 0.932064 29.0337 1.50035 31.1927H19.3358L24.8875 16.6415C26.1989 13.1873 31.3572 12.8418 33.0183 16.6415L42.0672 39.8283L44.6464 33.697C45.2146 32.2721 46.7446 31.1927 48.6243 31.1927H87.0055C87.5738 29.0337 87.9672 26.8748 87.9672 24.7159C87.9672 18.4175 85.4341 12.3771 80.9252 7.92344C76.4163 3.4698 70.3009 0.967773 63.9243 0.967773C55.7935 0.967773 48.6243 4.98337 44.2529 11.0715C39.8815 4.98337 32.7123 0.967773 24.5815 0.967773ZM4.91006 37.6694C3.75069 37.6694 2.6388 38.1243 1.819 38.9341C0.999195 39.7438 0.538635 40.8421 0.538635 41.9873C0.538635 43.1324 0.999195 44.2307 1.819 45.0404C2.6388 45.8502 3.75069 46.3051 4.91006 46.3051H15.5763L39.8815 70.0532C44.2529 73.9393 44.2529 73.9393 48.6243 70.0532L72.9295 46.3051H83.5958C84.7551 46.3051 85.867 45.8502 86.6868 45.0404C87.5066 44.2307 87.9672 43.1324 87.9672 41.9873C87.9672 40.8421 87.5066 39.7438 86.6868 38.9341C85.867 38.1243 84.7551 37.6694 83.5958 37.6694H50.3729L46.3075 47.6005C44.5589 51.9615 39.5318 51.357 37.9143 47.73L28.9529 24.7159L24.7563 34.7765C24.1006 36.4172 22.6143 37.6694 20.6472 37.6694H4.91006Z" fill="#EC5863"/>
+            </symbol>
+            <symbol id="chevron" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor">
+                <path stroke-linecap="round" stroke-linejoin="round" d="m4.5 15.75 7.5-7.5 7.5 7.5" />
+            </symbol>
+            <symbol id="bars" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6">
+                <path stroke-linecap="round" stroke-linejoin="round" d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25h16.5" />
+            </symbol>
+            <symbol id="xmark" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6">
+                <path stroke-linecap="round" stroke-linejoin="round" d="M6 18 18 6M6 6l12 12" />
+            </symbol>
+        </svg>
+        <!-- Header -->
+        <header class="bg-[#FAFBFD] min-h-[700px]" id="home">
+            <!-- Header Section -->
+            <section>
+                <!-- Desktop Header -->
+                <nav class="p-10 flex justify-center items-center mx-auto">
+                    <div class="flex justify-between items-center w-full">
+                        <!-- Logo -->
+                        <a href="http://mahdiadham.ir/go-corona" target="_self" class="flex justify-center items-center gap-x-1">
+                            <img src="./assets/images/logo.png" alt="corona">
+                            <p class="flex justify-center items-center capitalize font-rubikBold text-lg text-black leading-5">
+                                go
+                                <span class="text-spacialPink">corona</span>
+                            </p>
+                        </a>
+                        <!-- Nav Bar -->
+                        <ul class="hidden md:flex justify-center items-center gap-x-5 lg:gap-x-10 uppercase text-black font-railwayBold text-xs cursor-pointer tracking-widest child:border-2 child:border-transparent child:transition-all child-hover:border-2 child-hover:border-b-spacialPink child:pb-1">
+                            <li>
+                                <a href="#home" target="_self">home</a>
+                            </li>
+                            <li>
+                                <a href="#features" target="_self">features</a>
+                            </li>
+                            <li>
+                                <a href="#support" target="_self">support</a>
+                            </li>
+                            <li>
+                                <a href="#contact" target="_self">contact us</a>
+                            </li>
+                        </ul>
+                        <!-- Download Link-->
+                        <a href="#" class="hidden min-w-[130px] h-10 md:flex justify-center items-center rounded bg-spacialPurple uppercase text-white font-railwayExtraBold text-xs leading-3 tracking-widest">download</a>
+                        <!-- Bars & X-Mark Icon -->
+                        <svg class="md:hidden w-5 h-5 cursor-pointer" id="open-side">
+                            <use href="#bars"></use>
+                        </svg>
+                    </div>
+                </nav>
+                <!-- Side Bar -->
+                <div id="side-bar" class="w-64 fixed top-0 bottom-0 -left-64 bg-white rounded-tr-2xl rounded-br-2xl flex flex-col justify-start items-start divide-y-2 z-30 p-5 transition-all">
+                    <div class="flex justify-between items-center w-full pb-5">
+                        <a href="http://mahdiadham.ir/go-corona" target="_self" class="flex justify-center items-center gap-x-1">
+                            <img src="./assets/images/logo.png" alt="corona">
+                            <p class="flex justify-center items-center capitalize font-rubikBold text-lg text-black leading-5">
+                                go
+                                <span class="text-spacialPink">corona</span>
+                            </p>
+                        </a>
+                        <svg class="w-5 h-5 cursor-pointer" id="close-side">
+                            <use href="#xmark"></use>
+                        </svg>
+                    </div>
+                    <ul class="flex flex-col justify-center items-start gap-y-7 uppercase text-xs tracking-widest text-black font-railwayBold w-full pt-5">
+                        <li>
+                            <a href="#home" target="_self">home</a>
+                        </li>
+                        <li>
+                            <a href="#features" target="_self">features</a>
+                        </li>
+                        <li>
+                            <a href="#support" target="_self">support</a>
+                        </li>
+                        <li>
+                            <a href="#contact" target="_self">contact us</a>
+                        </li>
+                        <li class="flex justify-center items-center rounded bg-spacialPurple text-white font-railwayExtraBold text-xs px-5 py-3">
+                            <a href="#" target="_self">download</a>
+                        </li>
+                    </ul>
+                </div>
+                <div class="container">
+                    <!-- Intro Box -->
+                    <div class="mt-5 sm:mt-16 flex justify-around items-center flex-wrap sm:flex-nowrap gap-y-10 sm:gap-0 text-center sm:text-start">
+                        <!-- Introduction -->
+                        <div class="w-[400px] flex flex-col justify-center items-center sm:items-start gap-y-3">
+                            <!-- Title -->
+                            <h1 class="title">
+                                Take care of yours family’s
+                                <span class="text-spacialPurple">health.</span>
+                            </h1>
+                            <!-- Intro Text -->
+                            <p class="xs:w-[300px] text-xs leading-4 text-[#616161]">All in one destination for COVID-19 health queries. Consult 10,000+ health workers about your concerns.</p>
+                            <!-- Start Button -->
+                            <button type="button" class="feature-btn">get started</button>
+                            <!-- Video Link -->
+                            <div class="flex justify-center items-center gap-x-3 cursor-pointer mt-10 sm:mt-20">
+                                <!-- Play Icon -->
+                                <svg class="w-[44px] h-[44px]">
+                                    <use href="#play"></use>
+                                </svg>
+                                <!-- Link Description -->
+                                <div class="child:block child:my-1">
+                                    <span class="text-xs text-[#B0B0B0] leading-4 tracking-wide">Stay safe with GoCorona</span>
+                                    <span class="text-black uppercase text-xs tracking-widest leading-3">watch video</span>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- Header Image -->
+                        <img src="./assets/images/header-image.png" alt="doctor" class="w-auto h-auto sm:w-1/2 sm:h-1/2 md:h-3/5 md:w-3/5 lg:w-auto lg:h-auto">
+                    </div>
+                </div>
+            </section>
+        </header>
+        <main>
+            <!-- Features Section -->
+            <section id="features" class="py-20">
+                <div class="container">
+                    <!-- Feature Introduction Container -->
+                    <div class="flex justify-between lg:justify-around items-center gap-x-14 md:gap-x-0 flex-wrap sm:flex-nowrap gap-y-10 sm:gap-y-0">
+                        <!-- Feature Image -->
+                        <img src="./assets/images/feature-image.png" alt="feature">
+                        <!-- Feature Introduction -->
+                        <div class="md:w-[330px] flex flex-col justify-center items-center sm:items-start gap-y-3">
+                            <!-- Title -->
+                            <h1 class="title text-center sm:text-start">
+                                Stay safe with Go
+                                <span class="text-spacialPink">Corona.</span>
+                            </h1>
+                            <!-- Description -->
+                            <p class="description text-center sm:text-start">24x7 Support and user friendly mobile platform to bring healthcare to your fingertips. Signup and be a part of the new health culture.</p>
+                            <!-- Feature Button -->
+                            <button type="button" class="feature-btn">features</button>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            <!-- Support Section -->
+            <section id="support" class="pt-14 pb-28 bg-[#FAFBFD]">
+                <!-- Banner Background -->
+                <div class="mx-auto support-bg flex justify-center items-center p-10 md:w-[760px]">
+                    <!-- Support Guide -->
+                    <div class="rounded-2xl bg-white flex justify-center sm:justify-between items-center flex-wrap sm:flex-nowrap gap-10 py-7 px-10 md:px-20 w-full support-guide">
+                        <div class="support-div">
+                            <h3 class="support-title">2m</h3>
+                            <span class="support-description">users</span>
+                        </div>
+                        <div class="support-div">
+                            <h3 class="support-title">78</h3>
+                            <span class="support-description">countries</span>
+                        </div>
+                        <div class="support-div">
+                            <h3 class="support-title">10,000+</h3>
+                            <span class="support-description">medical experts</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="container">
+                    <!-- Experts Container -->
+                    <div class="flex justify-center sm:justify-around items-center flex-wrap sm:flex-nowrap gap-y-10 sm:gap-y-0 mt-20">
+                        <!-- Experts Introduction -->
+                        <div class="flex flex-col justify-center items-center sm:items-start gap-y-3">
+                            <!-- Title -->
+                            <h1 class="title">
+                                Talk to
+                                <span class="text-spacialPurple">experts.</span>
+                            </h1>
+                            <!-- Description -->
+                            <p class="description xs:w-80 text-center sm:text-start">Book appointments or submit queries into thousands of forums concerning health issues and prevention against noval Corona Virus.</p>
+                            <!-- Feature Button -->
+                            <button type="button" class="feature-btn">features</button>
+                        </div>
+                        <!-- Video Player -->
+                        <div class="cursor-pointer">
+                            <img src="./assets/images/video.png" alt="video">
+                        </div>
+                    </div>
+                </div>
+            </section>
+            <!-- Contact Section -->
+            <section id="contact" class="pt-20 pb-10">
+                <div class="container">
+                    <div class="flex flex-col justify-center items-center gap-y-4 text-center">
+                        <!-- Title -->
+                        <h1 class="title">
+                            <span class="text-spacialPink">Healthcare</span>
+                            at your Fingertips.
+                        </h1>
+                        <!-- Description -->
+                        <p class="xs:w-[350px] sm:w-[600px] description">Bringing premium healthcare features to your fingertips. User friendly mobile platform to bring healthcare to your fingertips. Signup and be a part of the new health culture.</p>
+                    </div>
+                    <!-- Tips -->
+                    <div class="mt-14 flex justify-center sm:justify-around items-center gap-5 lg:gap-0 flex-wrap sm:flex-nowrap">
+                        <div class="tip-box">
+                            <!-- Icon -->
+                            <svg class="w-[65px] h-[73px]">
+                                <use href="#vector1"></use>
+                            </svg>
+                            <!-- Title -->
+                            <h3 class="tip-title">symptom checker</h3>
+                            <!-- Description -->
+                            <p class="tip-description">Check if you are infected by COVID-19 with our Symptom Checker</p>
+                        </div>
+                        <div class="tip-box">
+                            <!-- Icon -->
+                            <svg class="w-[68px] h-[73px]">
+                                <use href="#vector2"></use>
+                            </svg>
+                            <!-- Title -->
+                            <h3 class="tip-title">24x7 medical support</h3>
+                            <!-- Description -->
+                            <p class="tip-description">Consult with 10,000+ health workers about your concerns.</p>
+                        </div>
+                        <div class="tip-box">
+                            <!-- Icon -->
+                            <svg class="w-[88px] h-[73px]">
+                                <use href="#vector3"></use>
+                            </svg>
+                            <!-- Title -->
+                            <h3 class="tip-title">conditions</h3>
+                            <!-- Description -->
+                            <p class="tip-description">Bringing premium healthcare features to your fingertips.</p>
+                        </div>
+                    </div>
+                    <!-- Download Links -->
+                    <div class="flex justify-center items-center gap-x-5 xs:gap-x-14 mt-20 child-hover:scale-110 child:transition-all">
+                        <a href="#" target="_blank">
+                            <img src="./assets/images/play-store.png" alt="play-store">
+                        </a>
+                        <a href="#" target="_blank">
+                            <img src="./assets/images/app-store.png" alt="app-store">
+                        </a>
+                    </div>
+                </div>
+            </section>
+        </main>
+        <!-- Footer -->
+        <footer>
+            <section class="border bt-black/60">
+                <!-- Footer Box -->
+                <div class="w-full flex justify-center sm:justify-between items-center flex-wrap sm:flex-nowrap gap-5 sm:gap-0  p-5">
+                    <span class="footer-text">copyright © 2023 mahdi adham. - all rights reserved.</span>
+                    <!-- Terms & Privacy -->
+                    <div class="footer-text flex justify-center items-center gap-x-7">
+                        <a href="#" target="_blank">privacy</a>
+                        <a href="#" target="_blank">security</a>
+                        <a href="#" target="_blank">terms</a>
+                    </div>
+                </div>
+            </section>
+        </footer>
+        <!-- Home Button -->
+        <div id="home-btn" class="hidden fixed bottom-[70px] right-5 justify-center items-center rounded-full border-2 border-spacialPurple w-12 h-12 cursor-pointer bg-spacialPurple">
+            <svg class="w-5 h-5 text-white">
+                <use href="#chevron"></use>
+            </svg>
+        </div>
+        <div class="hidden overlay fixed inset-0 bg-black/50 z-20"></div>
+
+        <script src="./node_modules/sweetalert2/dist/sweetalert2.all.min.js"></script>
+        <script src="./node_modules/jquery/dist/jquery.min.js"></script>
+        <script src="./src/common/scripts/script.js"></script>
+    </body>
+</html>
